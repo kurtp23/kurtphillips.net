@@ -8,13 +8,14 @@ export default function App() {
       <Text style={styles.h1}>Welcome to KurtPhillips.net</Text>
       <View style={styles.containerRow}>
         <View style={styles.column}>
-          <Text style={styles.p1}>
-            IM not exactly sure the purpose of this website, but hope to use it to improve apon my
-            skills, or just record things that happen in my life.
-          </Text>
+          <View style={[styles.box, { backgroundColor: "red" }]}></View>
         </View>
         <View style={styles.column}>
-          <Text style={styles.p1}>this is some other text that i also dont have an idea for</Text>
+          <View style={[styles.boxPic, { backgroundColor: "red" }]}></View>
+          <View style={[styles.boxPic2, { backgroundColor: "green" }]}></View>
+        </View>
+        <View style={styles.column}>
+          <View style={[styles.box, { backgroundColor: "red" }]}></View>
         </View>
       </View>
       <StatusBar style="auto" />
@@ -46,7 +47,21 @@ const styles = StyleSheet.create({
   },
   column: {
     flexDirection: "column",
-    paddingHorizontal: "100px",
+    paddingHorizontal: "25px",
     flexWrap: "wrap",
+    paddingVertical: "10px",
+  },
+  box: {
+    height: "400px",
+    width: "250px",
+  },
+  boxPic: {
+    height: "500px",
+    width: "500px",
+    paddingVertical: "10px",
+  },
+  boxPic2: {
+    height: "50px",
+    width: "500px",
   },
 });
