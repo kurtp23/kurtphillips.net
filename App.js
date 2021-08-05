@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Linking } from "react-native";
 import "./client/app.css";
 export default function App() {
   return (
@@ -15,7 +15,45 @@ export default function App() {
           <View style={[styles.boxPic2, { backgroundColor: "green" }]}></View>
         </View>
         <View style={styles.column}>
-          <View style={[styles.box, { backgroundColor: "red" }]}></View>
+          <View style={[styles.box, { backgroundColor: "#cfdae6" }]}>
+            <Text style={styles.h2}>Projects</Text>
+            <Text
+              style={styles.linkText}
+              onPress={() => Linking.openURL("https://github.com/kurtp23/language-app")}
+            >
+              Language App
+            </Text>
+            <Text
+              style={styles.linkText}
+              onPress={() => Linking.openURL("https://github.com/kurtp23/recipe-book")}
+            >
+              Recipe book
+            </Text>
+            <Text
+              style={styles.linkText}
+              onPress={() => Linking.openURL("https://github.com/kurtp23/entertainment-lists")}
+            >
+              Entertainment Lists
+            </Text>
+            <Text
+              style={styles.linkText}
+              onPress={() => Linking.openURL("https://github.com/kurtp23/note-taker")}
+            >
+              Note Taker
+            </Text>
+            <Text
+              style={styles.linkText}
+              onPress={() => Linking.openURL("https://github.com/kurtp23/javascript-quiz")}
+            >
+              Quiz App
+            </Text>
+            <Text
+              style={styles.linkText}
+              onPress={() => Linking.openURL("https://github.com/kurtp23/weather-dashboard")}
+            >
+              Weather Dashboard
+            </Text>
+          </View>
         </View>
       </View>
       <StatusBar style="auto" />
@@ -63,5 +101,15 @@ const styles = StyleSheet.create({
   boxPic2: {
     height: "50px",
     width: "500px",
+  },
+  linkText: {
+    fontSize: "20px",
+    color: "blue",
+  },
+  h2: {
+    fontSize: "30px",
+    color: "white",
+    textAlign: "center",
+    textShadow: "0px 1px 2px  #000",
   },
 });
